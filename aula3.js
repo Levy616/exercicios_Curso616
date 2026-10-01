@@ -12,13 +12,24 @@ import { input,confirm,number } from '@inquirer/prompts';
 // console.log("Você deseja " + resposta); 
 // console.log("Ano que vem você terá " + idade_dps + " anos.");
 
+// const coroa = await confirm ({message: 'voce usa uma coroa?', required:true});
+// const barba = await confirm ({message: 'voce tem barba?', required:true});
+// const salva = await confirm ({message: 'não foi eu,foi a coroa?', required:true});
+// const rei = ((coroa) && (barba) && (salva))? "olá rei gelado" : "IMPOSTOR DE BOSTA";
+// console.log(rei);
 
-let idade = await number ({message: 'idade?',
+const ingresso = await confirm({message: 'ingresso?',
+    required:true});
+    
+const idade = await number ({message: 'idade?',
     min:0,
     max:120,
     required: true});
 
-const ingresso = await confirm({message: 'ingresso?',
-    required:true});
 const acompanhado = await confirm({message: 'acompanhado?',
     required:true});
+    const entra = ((ingresso) && (idade >= 18 || acompanhado)) ? "Pode entrar" : "SAI DAQUI PRAGA RUIM";
+    console.log(entra);
+
+
+    
