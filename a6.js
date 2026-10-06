@@ -32,12 +32,23 @@ import {number,confirm,input,select} from '@inquirer/prompts';
 //         console.log("Faltam", + (30-i) + "L para um premio!!")
 //      }};
     
-     //exercicio 3
-const senhacrr = 2026;
-let senha = await number ({message:"qual a senha correta?"});
+//      //exercicio 3
+// const senhacrr = 2026;
+// let senha = await number ({message:"qual a senha correta?"});
 
-for (let i = senha; i = senhacrr) {
-    console.log(`senha correta,seja bem-vindo!`);
+// for (let i = senha; i = senhacrr;) {
+//     console.log(`senha correta,seja bem-vindo!`);
+    
 
-    if (i =/=///)
-}
+//     if (i !== senhacrr) {
+//         console.log("senha errada,tente novamente")};
+// };
+
+// let idade = await number ({message:"qual sua idade?"});
+
+// if (idade < 18) {
+//     console.log("voce é d menor!")
+// };
+// if (idade >= 18) {
+//     console.log("voce é d maior!")
+//};
