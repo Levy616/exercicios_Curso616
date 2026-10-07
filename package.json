@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Levy616/exercicios_Curso616#readme",
   "dependencies": {
-    "@inquirer/prompts": "^8.7.2"
-  }
+    "@inquirer/prompts": "^8.7.2",
+    "inquirer": "^14.2.3"
+  },
+  "devDependencies": {}
 }
