@@ -54,45 +54,98 @@ import inquirer from "inquirer";
 //     console.log("voce é d maior!")
 //};
 
-let total = 0; // Total dos preços
-let qtdBarato = 0; // Contador de baratos
-let qtdMedio = 0; // Contador de médios
-let qtdCaro = 0; // Contador de caros
-const resposta = await inquirer.prompt([ // Pergunta a quantidade
-{
-type: "input",
-name: "quantidade",
-message: "Quantos produtos?"
+// let total = 0; // Total dos preços
+// let qtdBarato = 0; // Contador de baratos
+// let qtdMedio = 0; // Contador de médios
+// let qtdCaro = 0; // Contador de caros
+// const resposta = await inquirer.prompt([ // Pergunta a quantidade
+// {
+// type: "input",
+// name: "quantidade",
+// message: "Quantos produtos?"
+// }
+// ]);
+// const quantidade = Number(resposta.quantidade); // Converte para número
+// for (let i = 1; i <= quantidade; i++) { // Repete o cadastro
+// const dados = await inquirer.prompt([
+// {
+// type: "input",
+// name: "nome",
+// message: `Nome do produto ${i}:`
+// },
+// {
+// type: "input",
+// name: "preco",
+// message: "Preço (R$):"
+// }
+// ]);
+// const preco = Number(dados.preco); // Converte o preço
+// total += preco; // Soma ao total
+// if (preco <= 50) { // Até R$ 50
+// console.log("Categoria: Barato");
+// qtdBarato++;
+// } else if (preco <= 100) { // Até R$ 100
+// console.log("Categoria: Médio");
+// qtdMedio++;
+// } else { // Acima de R$ 100
+// console.log("Categoria: Caro");
+// qtdCaro++;
+// }
+// }
+// console.log("\n--- RESUMO ---");
+// console.log(`Total: R$ ${total.toFixed(2)}`);
+// console.log(`Baratos: ${qtdBarato}`);
+// console.log(`Médios: ${qtdMedio}`);
+const notas = [
+    [9, 6, 8, 7],
+    [5, 8, 5, 9],
+    [6, 7, 8, 9]
+];
+// exibirMatriz(notas);
+
+function somarMatriz(matriz) {
+let soma = 0;
+for (let i = 0; i < matriz.length; i++) {
+for (let j = 0; j < matriz[i].length; j++) {
+soma += matriz[i][j];
 }
-]);
-const quantidade = Number(resposta.quantidade); // Converte para número
-for (let i = 1; i <= quantidade; i++) { // Repete o cadastro
-const dados = await inquirer.prompt([
-{
-type: "input",
-name: "nome",
-message: `Nome do produto ${i}:`
-},
-{
-type: "input",
-name: "preco",
-message: "Preço (R$):"
 }
-]);
-const preco = Number(dados.preco); // Converte o preço
-total += preco; // Soma ao total
-if (preco <= 50) { // Até R$ 50
-console.log("Categoria: Barato");
-qtdBarato++;
-} else if (preco <= 100) { // Até R$ 100
-console.log("Categoria: Médio");
-qtdMedio++;
-} else { // Acima de R$ 100
-console.log("Categoria: Caro");
-qtdCaro++;
+return soma;
+}
+
+function mediaMatriz(matriz) {
+let quantidade = 0;
+for (let i = 0; i < matriz.length; i++) {
+quantidade += matriz[i].length;
+}
+return somarMatriz(matriz) / quantidade;
+}
+
+function maiorValor(matriz) {
+let maior = matriz[0][0];
+for (let i = 0; i < matriz.length; i++) {
+for (let j = 0; j < matriz[i].length; j++) {
+if (matriz[i][j] > maior) {
+maior = matriz[i][j];
 }
 }
-console.log("\n--- RESUMO ---");
-console.log(`Total: R$ ${total.toFixed(2)}`);
-console.log(`Baratos: ${qtdBarato}`);
-console.log(`Médios: ${qtdMedio}`);
+}
+return maior; 
+}
+
+function menorValor(matriz) {
+let menor = matriz[0][0];
+for (let i = 0; i < matriz.length; i++) {
+for (let j = 0; j < matriz[i].length; j++) {
+if (matriz[i][j] < menor) {
+menor = matriz[i][j];
+}
+}
+}
+return menor;
+}
+
+console.log("Soma: " + somarMatriz(notas));
+console.log("Média: " + mediaMatriz(notas));
+console.log("Maior valor: " + maiorValor(notas));
+console.log("Menor valor: " + menorValor(notas));
