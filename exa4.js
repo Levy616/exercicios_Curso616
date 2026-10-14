@@ -50,38 +50,38 @@ import {number,confirm,input,select} from '@inquirer/prompts';
 
 
 
-let calculadora = await number({message: 'primeiro numero.',
-    required:true});
+// let calculadora = await number({message: 'primeiro numero.',
+//     required:true});
 
-const sinal = await select({
-        message: 'qual sinal deseja usar?',
-        choices: [
-            {name: '+',value: "+"},
-            {name: '-',value: "-"},
-            {name: '/',value: "/"},
-            {name: '*',value: "*"}
-         ]
-});
+// const sinal = await select({
+//         message: 'qual sinal deseja usar?',
+//         choices: [
+//             {name: '+',value: "+"},
+//             {name: '-',value: "-"},
+//             {name: '/',value: "/"},
+//             {name: '*',value: "*"}
+//          ]
+// });
 
-let calculadora2 = await number({message: 'segundo numero.',
-    required:true});
+// let calculadora2 = await number({message: 'segundo numero.',
+//     required:true});
 
-    switch (sinal) { 
-        case"+":
-            let RM = calculadora + calculadora2;
-            console.log(RM);
-            break;
+//     switch (sinal) { 
+//         case"+":
+//             let RM = calculadora + calculadora2;
+//             console.log(RM);
+//             break;
             
-        case"-":
-            let RMe = calculadora - calculadora2;
-            console.log(RMe);
-            break;
-        case"*" :
-            let RMu = calculadora * calculadora2;
-            console.log(RMu);
-            break;
-        case"/":
-            let RD = calculadora / calculadora2;
-            console.log(RD);
-            break;
-    };
+//         case"-":
+//             let RMe = calculadora - calculadora2;
+//             console.log(RMe);
+//             break;
+//         case"*" :
+//             let RMu = calculadora * calculadora2;
+//             console.log(RMu);
+//             break;
+//         case"/":
+//             let RD = calculadora / calculadora2;
+//             console.log(RD);
+//             break;
+//     };
