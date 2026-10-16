@@ -1,4 +1,4 @@
-import {number,confirm,input,select} from '@inquirer/prompts';
+import {select,number} from "@inquirer/prompts";
 
 
 // let preço = await number({message: 'qual o valor da compra?',
@@ -85,3 +85,48 @@ import {number,confirm,input,select} from '@inquirer/prompts';
 //             console.log(RD);
 //             break;
 //     };
+//desafio 3
+
+ const sev = await select({
+    message:'qual serviço vc deseja?', 
+    choices: [
+    { name:'formatação', value: "f"},
+    { name:'backup', value: "b"},
+    { name:'instalaçao de progamas', value: "ip"},
+    { name:' limpeza preventiva', value: "lp"},
+    { name:'sair', value: "s"},
+   
+        ]  
+    }
+);
+
+switch (sev) {
+   case "f" :
+    console.log("formatação selecionada!");
+    console.log("formatando . . .");
+    console.log("formatação completa!");
+    break;
+
+   case "b" :
+    console.log("backup selecionado!");
+    console.log("fazendo backup . . .");
+    console.log("backup completo!");
+    break;
+
+   case "ip" :
+    console.log("instalação de progamas selecionado!");
+    console.log("instalando . . .");
+    console.log("instalação completa!");
+    break;
+
+   case "lp" :
+    console.log("limpeza preventiva selecionada!");
+    console.log("limpando . . .");
+    console.log("limpeza completa!");
+    break;
+
+   case "s" :
+    console.log("saindo . . .");
+    console.log("tenha um bom dia");
+    break;
+}
