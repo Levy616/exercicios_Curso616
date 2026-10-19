@@ -93,7 +93,7 @@ import {select,number} from "@inquirer/prompts";
     { name:'formatação', value: "f"},
     { name:'backup', value: "b"},
     { name:'instalaçao de progamas', value: "ip"},
-    { name:' limpeza preventiva', value: "lp"},
+    { name:'limpeza preventiva', value: "lp"},
     { name:'sair', value: "s"},
    
         ]  
