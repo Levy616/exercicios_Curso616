@@ -1,4 +1,4 @@
-import {select,number} from "@inquirer/prompts";
+import { select, number } from "@inquirer/prompts";
 
 
 // let preço = await number({message: 'qual o valor da compra?',
@@ -71,7 +71,7 @@ import {select,number} from "@inquirer/prompts";
 //             let RM = calculadora + calculadora2;
 //             console.log(RM);
 //             break;
-            
+
 //         case"-":
 //             let RMe = calculadora - calculadora2;
 //             console.log(RMe);
@@ -87,46 +87,71 @@ import {select,number} from "@inquirer/prompts";
 //     };
 //desafio 3
 
- const sev = await select({
-    message:'qual serviço vc deseja?', 
+//  const sev = await select({
+//     message:'qual serviço vc deseja?', 
+//     choices: [
+//     { name:'formatação', value: "f"},
+//     { name:'backup', value: "b"},
+//     { name:'instalaçao de progamas', value: "ip"},
+//     { name:'limpeza preventiva', value: "lp"},
+//     { name:'sair', value: "s"},
+
+//         ]  
+//     }
+// );
+
+// switch (sev) {
+//    case "f" :
+//     console.log("formatação selecionada!");
+//     console.log("formatando . . .");
+//     console.log("formatação completa!");
+//     break;
+
+//    case "b" :
+//     console.log("backup selecionado!");
+//     console.log("fazendo backup . . .");
+//     console.log("backup completo!");
+//     break;
+
+//    case "ip" :
+//     console.log("instalação de progamas selecionado!");
+//     console.log("instalando . . .");
+//     console.log("instalação completa!");
+//     break;
+
+//    case "lp" :
+//     console.log("limpeza preventiva selecionada!");
+//     console.log("limpando . . .");
+//     console.log("limpeza completa!");
+//     break;
+
+//    case "s" :
+//     console.log("saindo . . .");
+//     console.log("tenha um bom dia");
+//     break;
+// }
+
+
+const papoy = await select({
+    message: 'Papoy?',
     choices: [
-    { name:'formatação', value: "f"},
-    { name:'backup', value: "b"},
-    { name:'instalaçao de progamas', value: "ip"},
-    { name:'limpeza preventiva', value: "lp"},
-    { name:'sair', value: "s"},
-   
-        ]  
-    }
+        { name: 'papoy papoy', value: "pp" },
+        { name: 'PAPOY!', value: "P" },
+        { name: 'paaaapoy.', value: "ppp" },
+    ]
+}
 );
 
-switch (sev) {
-   case "f" :
-    console.log("formatação selecionada!");
-    console.log("formatando . . .");
-    console.log("formatação completa!");
+switch (papoy) {
+    case "pp" :
+    console.log("PAPPPPPPPPPPPPPPPPPPPPPPPOYY");
     break;
+    
+    case "p" :
+    console.log("ehhhh papoy??");
+    break;
+    case "ppp" :
+    console.log("hehe PA...poy😈");
+    break;
+};
 
-   case "b" :
-    console.log("backup selecionado!");
-    console.log("fazendo backup . . .");
-    console.log("backup completo!");
-    break;
-
-   case "ip" :
-    console.log("instalação de progamas selecionado!");
-    console.log("instalando . . .");
-    console.log("instalação completa!");
-    break;
-
-   case "lp" :
-    console.log("limpeza preventiva selecionada!");
-    console.log("limpando . . .");
-    console.log("limpeza completa!");
-    break;
-
-   case "s" :
-    console.log("saindo . . .");
-    console.log("tenha um bom dia");
-    break;
-}

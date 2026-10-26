@@ -137,32 +137,32 @@
 // cliente1.apresentar();
 
 //                                               DESAFIO 8
-// class Produto {
-//     constructor(nome, quantidade) {
-//         this.nome = nome;
-//         this.quantidade = quantidade;
-//     }
-//     validar() {
-//         if (this.quantidade < 0 ||  !Number.isInteger(this.quantidade)) {
-//                 console.log(`NOME: ${this.nome} `)
-//                 console.log("QUANTIDADE INVÁLIDA!!❌❌❌\n\n")
+class Produto {
+    constructor(nome, quantidade) {
+        this.nome = nome;
+        this.quantidade = quantidade;
+    }
+    validar() {
+        if (this.quantidade < 0 ||  !Number.isInteger(this.quantidade)) {
+                console.log(`NOME: ${this.nome} `)
+                console.log("QUANTIDADE INVÁLIDA!!❌❌❌\n\n")
 
-//         } else {console.log (`DADOS DO PRODUTO
-// NOME: ${this.nome}
-// QUANTIDADE: ${this.quantidade}\n\n`)
+        } else {console.log (`DADOS DO PRODUTO
+NOME: ${this.nome}
+QUANTIDADE: ${this.quantidade}\n\n`)
 
-//         }
-//     }
+        }
+    }
 
-// };
+};
 
-// const produto1 = new Produto ("mouse", -12);
-// const produto2 = new Produto ("teclado", 3.5);
-// const produto3 = new Produto ("monitor", 2);
+const produto1 = new Produto ("mouse", 90);
+const produto2 = new Produto ("teclado", 35);
+const produto3 = new Produto ("monitor", -2.5);
 
-// produto1.validar();
-// produto2.validar();
-// produto3.validar();
+produto1.validar();
+produto2.validar();
+produto3.validar();
 
 
 //                                                        DESAFIO 9
@@ -231,74 +231,74 @@
 //     new Produtos("tv", 2500, 20, 103)
 // ]
 
+//                              DESAFIO 10
+// class Produto {
+//     constructor(codigo, nome, preco, quantidade) {
+//         this.codigo = codigo;
+//         this.nome = nome;
+//         this.preco = preco;
+//         this.quantidade = quantidade;
+//     }
 
-class Produto {
-    constructor(codigo, nome, preco, quantidade) {
-        this.codigo = codigo;
-        this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
-    }
+//     // Calcula o valor total do produto
+//     calcularTotal() {
+//         return this.preco * this.quantidade;
+//     }
 
-    // Calcula o valor total do produto
-    calcularTotal() {
-        return this.preco * this.quantidade;
-    }
+//     // Atualiza a quantidade com validação
+//     atualizarQuantidade(valor) {
+//         if (Number.isInteger(valor) && valor >= 0) {
+//             this.quantidade = valor;
+//             console.log(`Quantidade de ${this.nome} atualizada para ${valor}.`);
+//         } else {
+//             console.log(`Quantidade inválida para ${this.nome}!`);
+//         }
+//     }
 
-    // Atualiza a quantidade com validação
-    atualizarQuantidade(valor) {
-        if (Number.isInteger(valor) && valor >= 0) {
-            this.quantidade = valor;
-            console.log(`Quantidade de ${this.nome} atualizada para ${valor}.`);
-        } else {
-            console.log(`Quantidade inválida para ${this.nome}!`);
-        }
-    }
+//     // Apresenta as informações do produto
+//     apresentar() {
+//         console.log(`Código: ${this.codigo}`);
+//         console.log(`Nome: ${this.nome}`);
+//         console.log(`Preço: R$ ${this.preco.toFixed(2)}`);
+//         console.log(`Quantidade: ${this.quantidade}`);
+//         console.log(`Total: R$ ${this.calcularTotal().toFixed(2)}`);
+//         console.log("--------------------------");
+//     }
+// }
 
-    // Apresenta as informações do produto
-    apresentar() {
-        console.log(`Código: ${this.codigo}`);
-        console.log(`Nome: ${this.nome}`);
-        console.log(`Preço: R$ ${this.preco.toFixed(2)}`);
-        console.log(`Quantidade: ${this.quantidade}`);
-        console.log(`Total: R$ ${this.calcularTotal().toFixed(2)}`);
-        console.log("--------------------------");
-    }
-}
+// // Array para armazenar os produtos
+// const produtos = [];
 
-// Array para armazenar os produtos
-const produtos = [];
+// // Cadastro de três produtos
+// produtos.push(new Produto(101, "Mouse", 50, 5));
+// produtos.push(new Produto(102, "Teclado", 80, 2));
+// produtos.push(new Produto(103, "Monitor", 700, 1));
 
-// Cadastro de três produtos
-produtos.push(new Produto(101, "Mouse", 50, 5));
-produtos.push(new Produto(102, "Teclado", 80, 2));
-produtos.push(new Produto(103, "Monitor", 700, 1));
+// // Função para listar e calcular o estoque
+// function listarEstoque() {
+//     let totalGeral = 0;
 
-// Função para listar e calcular o estoque
-function listarEstoque() {
-    let totalGeral = 0;
+//     console.log("\n=== CONTROLE DE ESTOQUE ===");
 
-    console.log("\n=== CONTROLE DE ESTOQUE ===");
+//     for (const produto of produtos) {
+//         produto.apresentar();
+//         totalGeral += produto.calcularTotal();
+//     }
 
-    for (const produto of produtos) {
-        produto.apresentar();
-        totalGeral += produto.calcularTotal();
-    }
+//     console.log(`VALOR GERAL: R$ ${totalGeral.toFixed(2)}`);
+// }
 
-    console.log(`VALOR GERAL: R$ ${totalGeral.toFixed(2)}`);
-}
+// // Primeira listagem
+// listarEstoque();
 
-// Primeira listagem
-listarEstoque();
+// // Teste de atualização válida
+// console.log("\n=== ATUALIZAÇÃO VÁLIDA ===");
+// produtos[0].atualizarQuantidade(10);
 
-// Teste de atualização válida
-console.log("\n=== ATUALIZAÇÃO VÁLIDA ===");
-produtos[0].atualizarQuantidade(10);
+// // Testes de atualizações inválidas
+// console.log("\n=== ATUALIZAÇÕES INVÁLIDAS ===");
+// produtos[1].atualizarQuantidade(-5);
+// produtos[2].atualizarQuantidade(2.5);
 
-// Testes de atualizações inválidas
-console.log("\n=== ATUALIZAÇÕES INVÁLIDAS ===");
-produtos[1].atualizarQuantidade(-5);
-produtos[2].atualizarQuantidade(2.5);
-
-// Listagem após os testes
-listarEstoque();
+// // Listagem após os testes
+// listarEstoque();
