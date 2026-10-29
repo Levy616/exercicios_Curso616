@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Protótipo didático de estoque: HTML5, CSS3, responsividade e primeiro contato com DOM.">
+  <title>Aula 11 | Controle de Estoque</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/script.js" defer></script>
+</head>
+  <header class="cabecalho">
+    <div class="container topo">
+      <div>
+        <h1>Controle de Estoque</h1>
+        <p class="subtitulo">Projeto do curso Programador de Sistemas</p>
+      </div>
+      <nav id="menulinks" class="menu" aria-label="Menu principal">
+        <a href="inicio.html" class="ativo" aria-current="location">Início</a>
+        <a href="#conceitos">CSS na prática</a>
+        <a href="#cadastro">Cadastro</a>
+        <a href="produtos.html">Produtos</a>
+      </nav>
+    </div>
+  </header>
+
+<body>
+ 
+    <section id="produtos" class="card">
+      <h2>Produtos cadastrados (exemplos)</h2>
+      <div class="tabela-rolagem" role="region" aria-label="Tabela de produtos com rolagem horizontal" tabindex="0">
+        <table class="tabela">
+          <caption>Estoque demonstrativo</caption>
+          <thead><tr><th scope="col">Código</th><th scope="col">Produto</th><th scope="col">Preço</th><th scope="col">Quantidade</th></tr></thead>
+          <tbody>
+            <tr><td>101</td><td>Mouse</td><td>R$ 50,00</td><td>10</td></tr>
+            <tr><td>102</td><td>Teclado</td><td>R$ 80,00</td><td>5</td></tr>
+            <tr><td>103</td><td>Monitor</td><td>R$ 700,00</td><td>2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape"><p>Curso Programador de Sistemas • Aula 11 — CSS3 e Introdução ao DOM</p></footer>
+</body>
+</html>
+

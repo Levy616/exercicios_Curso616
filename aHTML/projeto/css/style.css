@@ -32,3 +32,10 @@
      background-color: red;
      color: black;
  }
+
+ #instrumento {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 15px rgb(194, 91, 91)
+ }
