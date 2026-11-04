@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Exercício de formulário de login com validação em JavaScript.">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/css.css">
+
+</head>
+<body>
+  <main class="painel">
+    <aside class="marca" aria-label="Área do aluno">
+      <div>
+        <h1>TESTE DE GRAVIDEZ</h1>
+        <p>Entre para continuar de onde você parou.</p>
+      </div>
+      <small>Exercícios de HTML e JavaScript</small>
+    </aside>
+
+    <section class="conteudo" aria-live="polite">
+      <div class="form-area" id="area-login">
+        <p class="etiqueta">Área do aluno</p>
+        <h2>Fazer login</h2>
+        <p class="introducao">Insira seus <strong>dados</strong> para acessar.</p>
+
+        <form id="form-login">
+          <div class="campo">
+            <label for="usuario">Usuário</label>
+            <input id="usuario" name="usuario" type="text" autocomplete="username" required>
+          </div>
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+          </div>
+          <button type="submit">Entrar</button>
+          <p class="aviso" id="mensagem" role="alert"></p>
+        </form>
+
+       
+      </div>
+
+      <div class="form-area boas-vindas" id="area-protegida" hidden>
+        <div class="selo" aria-hidden="true">✓</div>
+        <p class="etiqueta">Acesso autorizado</p>
+        <h2>Bem-vindo, ZéDo616!</h2>
+        <p>Retome seus estudos de onde você parou.</p>
+        <button id="botao-sair" type="button">Sair</button>
+      </div>
+    </section>
+  </main>
+
+ <script src="js/js.js"></script>
+</body>
+</html>

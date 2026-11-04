@@ -231,7 +231,7 @@ const produtos = [
     new Produtos("tv", 2500, 20, 103)
 ]
 
-                             DESAFIO 10
+                            //  DESAFIO 10
 class Produto {
     constructor(codigo, nome, preco, quantidade) {
         this.codigo = codigo;
