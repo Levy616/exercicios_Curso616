@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 - Enviando Formulários</title>
+
+    <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+    <nav>
+        <a href="01_valores.html">Valores</a>
+        <a href="02_captura.html">Captura</a>
+        <a href="03_submit.html">Submite</a>
+        <a href="04_lista.html">Lista 1</a>
+        <a href="05_listaV.html">Lista valida</a>
+        <a href="06_crud.html">Crud</a>
+        
+        
+    </nav>
+    <main class="container-formulario">
+        <h2>Enviando Formulários</h2>
+        <form id="formulario">
+            <label for="nome">Nome completo</label>
+            <input type="nome" id="nome" placeholder="fulano" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="exemplo@email.com" required>
+            <button type="submit" id="enviar">
+                Enviar Formulário
+            </button>
+        </form>
+        <p id="mensagem" aria-live="polite"></p>
+    </main>
+    <nav>
+        <a href="01_valores.html">iniciar outro formulário</a>
+    </nav>
+</body>
+<script src="js/js.js"></script>
+
+</html>

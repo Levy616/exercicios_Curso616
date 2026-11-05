@@ -1,55 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
+     
   <meta charset="UTF-8">
+     
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Exercício de formulário de login com validação em JavaScript.">
-  <title>Login</title>
+      <title>Document</title>
+     
   <link rel="stylesheet" href="css/css.css">
-
 </head>
+
 <body>
-  <main class="painel">
-    <aside class="marca" aria-label="Área do aluno">
-      <div>
-        <h1>TESTE DE GRAVIDEZ</h1>
-        <p>Entre para continuar de onde você parou.</p>
-      </div>
-      <small>Exercícios de HTML e JavaScript</small>
-    </aside>
-
-    <section class="conteudo" aria-live="polite">
-      <div class="form-area" id="area-login">
-        <p class="etiqueta">Área do aluno</p>
-        <h2>Fazer login</h2>
-        <p class="introducao">Insira seus <strong>dados</strong> para acessar.</p>
-
-        <form id="form-login">
-          <div class="campo">
-            <label for="usuario">Usuário</label>
-            <input id="usuario" name="usuario" type="text" autocomplete="username" required>
-          </div>
-          <div class="campo">
-            <label for="senha">Senha</label>
-            <input id="senha" name="senha" type="password" autocomplete="current-password" required>
-          </div>
-          <button type="submit">Entrar</button>
-          <p class="aviso" id="mensagem" role="alert"></p>
-        </form>
-
-       
-      </div>
-
-      <div class="form-area boas-vindas" id="area-protegida" hidden>
-        <div class="selo" aria-hidden="true">✓</div>
-        <p class="etiqueta">Acesso autorizado</p>
-        <h2>Bem-vindo, ZéDo616!</h2>
-        <p>Retome seus estudos de onde você parou.</p>
-        <button id="botao-sair" type="button">Sair</button>
-      </div>
-    </section>
-  </main>
-
- <script src="js/js.js"></script>
+  <nav>
+    <a href="02_captura.html">Captura</a>
+    <a href="02_submit.html">Submite</a>
+    <a href="04_lista.html">Lista valida</a>
+    <a href="05_crud.html">Crud</a>
+    <a href="06_storage.html">Storage</a>
+  </nav>
+  <input id="produto" type="text"> <span class="retorno"></span>
+  <button type="button" id="adicionar">
+    Adicionar
+  </button>
+  <ul id="lista"></ul>
+  <script>
+    const campo = _________________;
+    const retorno = _________________;
+    const botao = _________________;
+    const lista = _________________; 
+    botao.addEventListener("click", () => {
+ const produto = campo.value.trim();
+retorno.textContent = "";
+ if (!produto) {
+ retorno.textContent = "Campo vazio";
+return;
+}
+ const item = document.createElement("li");
+ item.textContent = produto;
+ lista.append(item);
+ campo.value = "";
+})
+  </script>
 </body>
+
 </html>

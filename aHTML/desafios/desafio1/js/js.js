@@ -10,11 +10,11 @@ formLogin.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
   const senha = campoSenha.value.trim();
-  if (senha.length<5){
+  if (senha.length < 5) {
 
     alert("menor 5");
     return
-    
+
   }
 
   if (campoUsuario.value.trim() === "zedo616" && campoSenha.value === "61616") {
@@ -22,7 +22,7 @@ formLogin.addEventListener("submit", (evento) => {
     areaLogin.hidden = true;
     areaProtegida.hidden = false;
     areaProtegida.querySelector("button").focus();
-    alert ("login realizado!");
+    alert("login realizado!");
     return;
   }
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Exercício de lista dinâmica com JavaScript.">
+  <title>Lista dinâmica</title>
+  <link rel="stylesheet" href="css/css.css">
+
+</head>
+
+<body>
+  <main class="painel">
+    <aside class="marca" aria-label="Área do aluno">
+      <div>
+        <h1>Lista dinâmica</h1>
+        <h2>Adicione seus itens à lista!</h2>
+      </div>
+
+    </aside>
+
+    <section class="conteudo">
+      <div class="form-area">
+        <h2>Minha lista</h2> <!-- Exibe o título da lista. -->
+        <p class="introducao">Digite seu item e clique em Adicionar.</p> <!-- Orienta o usuário sobre o uso. -->
+
+        <form id="form-lista"> <!-- Agrupa o campo e o botão; também permite adicionar com Enter. -->
+          <div class="campo"> <!-- Agrupa o rótulo e o campo de texto para aplicar o estilo. -->
+            <label for="item">Novo item</label> <!-- Associa um texto descritivo ao campo. -->
+            <input id="item" name="item" type="text" autocomplete="off"> <!-- Recebe o texto que será adicionado. -->
+          </div> <!-- Encerra o grupo do campo de texto. -->
+          <button type="submit">Adicionar</button> <!-- Envia o formulário para incluir o item na lista. -->
+          <p class="aviso" id="mensagem" role="status" aria-live="polite"></p>
+          <!-- Mostra avisos acessíveis sem interromper o usuário. -->
+        </form>
+
+        <ul id="lista-itens" aria-label="Itens adicionados"></ul>
+        <!-- Recebe os elementos li criados pelo JavaScript. -->
+      </div>
+    </section>
+  </main>
+
+ 
+</body>
+<script src="js/js.js"></script>
+</html>

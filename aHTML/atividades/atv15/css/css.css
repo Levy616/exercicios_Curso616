@@ -1,0 +1,153 @@
+
+    :root {
+      color-scheme: light;
+      --ink: #884404;
+      --muted: #010c08;
+      --paper: #573c03dc;
+      --white: #ffffff;
+      --green: #25274b;
+      --green-dark: #790101e3;
+      --line: #ffd000;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 80vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px 18px;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(#026b0b 0.9px, transparent 0.9px);
+      background-size: 19px 19px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    .painel {
+      width: min(840px, 100%);
+      min-height: 540px;
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      box-shadow: 10px 24px 70px rgba(0, 0, 0, 0.12);
+      animation: surgir 450ms ease-out both;
+    }
+
+    .marca {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 43px;
+      color: var(--white);
+      background: var(--green-dark);
+    }
+
+    .marca h1 {
+      max-width: 290px;
+      margin: 0 1 14px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 45px;
+      font-weight: 500;
+      line-height: 1.10;
+    }
+
+    .marca p { max-width: 290px; margin: 0; color: #d1e4d9; line-height: 1.65; }
+    .marca small { color: #d1e4d9; }
+
+    .conteudo {
+      display: flex;
+      align-items: center;
+      padding: 54px clamp(28px, 7vw, 72px);
+    }
+
+    .form-area { width: 100%; }
+
+    .etiqueta {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    h2 { margin: 0; font-size: 29px; line-height: 1.2; }
+
+    .introducao { margin: 11px 0 30px; color: var(--muted); line-height: 1.55; }
+
+    .campo { margin-bottom: 19px; }
+    label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 700; }
+
+    input {
+      width: 100%;
+      min-height: 48px;
+      padding: 0 13px;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      font: inherit;
+    }
+
+    input:focus { outline: 3px solid rgb(23 107 80 / 18%); border-color: var(--green); }
+
+    button {
+      width: 100%;
+      min-height: 48px;
+      margin-top: 5px;
+      color: var(--white);
+      background: var(--green);
+      border: 0;
+      border-radius: 5px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover { background: var(--green-dark); }
+    button:focus-visible { outline: 3px solid #84bda4; outline-offset: 3px; }
+
+    .aviso {
+      min-height: 24px;
+      margin: 12px 0 0;
+      font-size: 14px;
+    }
+
+    .aviso:empty { display: none; }
+    .aviso:not(:empty) { color: var(--green-dark); }
+
+    ul {
+      display: grid;
+      gap: 8px;
+      padding-left: 22px;
+    }
+
+    li {
+      padding: 9px 12px;
+      background: #f3f6f2;
+      border-radius: 5px;
+      overflow-wrap: anywhere;
+    }
+
+    @keyframes surgir {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 16px; }
+      .painel { grid-template-columns: 1fr; min-height: auto; }
+      .marca { min-height: 205px; padding: 25px; }
+      .marca h1 { margin-top: 26px; font-size: 32px; }
+      .marca p, .marca small { display: none; }
+      .conteudo { padding: 34px 25px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; }
+    }
